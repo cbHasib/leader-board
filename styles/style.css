@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap');
 
 :root{
     --primary-font: 'Poppins', sans-serif;
@@ -17,13 +17,64 @@
 body{
     background-color: var(--bg-color);
     font-family: var(--primary-font);
+    margin: 0;
 }
+
+
+/* Header  */
+header{
+    height: 80px;
+    background-image: linear-gradient(var(--primary-color), #3d22b3);
+    /* background-color: var(--primary-color); */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img{
+    height: 50px;
+}
+.logo p{
+    color: var(--white-color);
+    font-size: 24px;
+    font-weight: 500;
+    margin-left: 16px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+    column-gap: 36px;
+}
+.menu > nav > ul{
+    margin-block: 0;
+}
+.menu > nav > ul > li{
+    display: inline;
+    color: var(--white-color);
+    font-size: 16px;
+    font-weight: 400;
+    margin-left: 36px;
+    margin-right: 0px;
+}
+.menu > nav > ul > li a{
+    text-decoration: none;
+    color: var(--white-color);
+}
+
 
 /* Main  */
 main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 /* Common */
@@ -141,7 +192,9 @@ hr{
     align-items: center;
     justify-content: space-between;
 }
-
+.course-title{
+    font-size: 20px;
+}
 .fa-star{
     font-size: 12px;
 }
@@ -175,6 +228,15 @@ hr{
 
 /* Mobile Device  */
 @media only screen and (max-width: 668px) {
+
+    header{
+        justify-content: space-between;
+        padding: 0 5%;
+    }
+    nav{
+        display: none;
+    }
+
     .container {
         width: 80%;
     }
@@ -198,9 +260,32 @@ hr{
     }
 }
 
+
+/* Tablet View  */
 @media only screen and (min-width: 669px) and (max-width: 976px) {
     .container {
         width: 90%;
     }
     
+    .blog-title{
+        font-size: 16px;
+    }
+    .blog .thumbnail img{
+        width: 140px;
+        height: 95px;
+    }
+
+    .blog-author{
+        font-size: 14px;
+    }
+
+    .course-title{
+        font-size: 17px;
+    }
+
+    
+    .course-duration{
+        font-size: 14px;
+        text-align: center;
+    }
 }
